@@ -3,7 +3,7 @@
 require_relative "lib/perfect_toml"
 
 Gem::Specification.new do |spec|
-  spec.name = "perfect_toml"
+  spec.name = "perfect_toml_improved"
   spec.version = PerfectTOML::VERSION
   spec.authors = ["Yusuke Endoh"]
   spec.email = ["mame@ruby-lang.org"]
@@ -12,14 +12,16 @@ Gem::Specification.new do |spec|
   spec.description = <<END
 PerfectTOML is yet another TOML parser.
 It is fully compliant with TOML v1.0.0, and faster than existing TOML parsers for Ruby.
+PerfectTomlImproved is just a fork of PerfectToml with a features I have merge requests open for in PerfectToml. 
+PerfectTomlImproved will go away once the changes are merged. You should use PerfectToml unless you want those features.
 END
-  spec.homepage = "https://github.com/mame/perfect_toml"
+  spec.homepage = "https://github.com/bemehiser/perfect_toml"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/mame/perfect_toml"
-  spec.metadata["changelog_uri"] = "https://github.com/mame/perfect_toml/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/bemehiser/perfect_toml"
+  spec.metadata["changelog_uri"] = "https://github.com/bemehiser/perfect_toml/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
