@@ -23,7 +23,7 @@
 require "strscan"
 
 module PerfectTOML
-  VERSION = "0.9.1"
+  VERSION = "0.9.3"
 
   class LocalDateTimeBase
     def to_inline_toml
@@ -211,9 +211,15 @@ module PerfectTOML
   #
   # See PerfectTOML.parse for options.
   def self.load_file(io, **opts)
-    io = File.open(io, encoding: "UTF-8") unless IO === io
+    data = if IO === io
+             io.read
+           else
+             File.open(io, encoding: "UTF-8") do |file|
+               file.read
+             end
+           end
 
-    parse(io.read, **opts)
+    parse(data, **opts)
   end
 
   # call-seq:
